@@ -1,0 +1,42 @@
+  <!-- place for Featurebox or any masthead solution -->
+  {HERO}
+  {SETSTYLE=wmessage}
+  {WMESSAGE}
+  <!-- Page Content -->
+
+   {ALERTS}
+   {SETSTYLE=font-side} <!-- Example -->
+   {---}
+   <div class="py-5">
+     <div class="container">
+       <div class="frontpage-news-latest">
+         <!-- Latest 5 news -->
+         {BOOTSTRAP_GRID_NEWS_FRONT_LATEST}         
+       </div>
+       <div class="frontpage-news-category-1">
+         <!-- Category 1- 4 news -->
+         {BOOTSTRAP_GRID_NEWS_FRONT_CATEGORY_1}         
+       </div>
+       <div class="frontpage-news-category-2">
+         <!-- Category 2 - 5 news -->
+         {BOOTSTRAP_GRID_NEWS_FRONT_CATEGORY_2}         
+       </div>
+       <div class="frontpage-news-category-3">
+         <!-- Category 2 - 5 news -->
+         {BOOTSTRAP_GRID_NEWS_FRONT_CATEGORY_3}         
+       </div>
+       <div id='portfolio' class='portfolio'> 
+		{SETSTYLE=portfolio}
+        {SETIMAGE: w=800&h=800&crop=1}
+	    {GALLERY_PORTFOLIO: placeholder=1&&category=2&limit=4} 
+       </div>
+       <div class="frontpage-news-category-4">
+         <!-- Category 2 - 5 news -->
+         {BOOTSTRAP_GRID_NEWS_FRONT_CATEGORY_4}         
+       </div>
+       <div class="frontpage-news-category-5">
+         <!-- Category 2 - 5 news -->
+         {BOOTSTRAP_GRID_NEWS_FRONT_CATEGORY_5}         
+       </div>
+     </div> 
+   </div>

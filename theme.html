@@ -1,0 +1,114 @@
+
+<body id="page-top" class="{LAYOUT_ID}" {BODY_ONLOAD} >
+  <div id="header" class="autohide">
+    <div id="header-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-6">
+            <div class="header-top-left">
+              {XURL_ICONS}
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-6">       
+            <div class="header-top-right text-end">
+              <span class="header-top-search">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modal-search">{GLYPH=fas fa-search}</a>
+              </span>
+              {SIGNIN} 
+              {MEMBERS_LANGUAGE_SWITCHER}  
+            </div>
+          </div>
+        </div>    
+      </div>
+    </div>
+    <div id="header-bottom"> 
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-3">
+            <a class="navbar-brand" href="{SITEURL}">
+              <div class="site-logo float-start">
+                {SETIMAGE: w=800&h=800&crop=1}
+                {LOGO}
+              </div>
+              <div class="site-name d-block">{SITENAME}</div>
+              <div class="site-tag d-block">{SITETAG}</div>
+            </a>
+          </div>
+          <div class="col-md-12 col-lg-9">
+            <nav class="navbar navbar-expand-lg navbar-dark">              
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                {NAVIGATION: type=main}     
+              </div>           
+            </nav> 
+          </div>          
+        </div>   
+      </div> 
+    </div>
+  </div>
+
+<!--- Optional custom header template controlled by theme_shortcodes -->
+{---HEADER---}
+
+<!-- Page Content -->
+{---LAYOUT---}
+
+<!-- Footer --> 
+{SETSTYLE=footer}
+
+
+<div id="footer" class="footer py-4">
+  <div class="container">
+    <div class="row">
+	  <div class="col-md-6">
+        {SETSTYLE=footer-menu}
+		{MENUAREA=10}
+	  </div>
+	  <div class="col-md-6">
+        {SETSTYLE=footer-menu}
+		{MENUAREA=11}
+	  </div>
+	</div>
+    <hr />
+    <div class="row">
+      <div class="col-6 text-start">
+	    <div class="footer-dissclaimer">{SITEDISCLAIMER}</div>
+      </div>
+      <div class="col-6 text-end">
+        <div class="footer-icons">{XURL_ICONS}</div>
+      </div>
+	</div>
+	<!-- /.container -->
+  </div>
+</div>
+
+<!--- Optional custom footer template controlled by theme_shortcodes -->
+{---FOOTER---}
+
+
+
+{---MODAL---}
+
+
+        <!-- START: Search Modal -->
+<div class="modal fade" id="modal-search" tabindex="-1" aria-labelledby="searchModalLabel"aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="searchModalLabel">Search</h1>
+        <button type="button" class="btn-close search" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>        
+      <div class="modal-body">
+        {SEARCH}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END: Search Modal -->
+
+<!-- Javascripts and other information are automatically added below here -->
+</body> <!-- This tag is not necessary and is ignored and replaced. Left here only as a reference -->
+
+
