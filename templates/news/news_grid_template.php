@@ -367,9 +367,9 @@ $NEWS_GRID_TEMPLATE['front-category-5']['start'] = '
 ';
 $NEWS_GRID_TEMPLATE['front-category-5']['featured'] = ' ';
 $NEWS_GRID_TEMPLATE['front-category-5']['item'] = '
-    <div class="col-lg-6">     
+    <div class="col-lg-6 d-flex align-items-stretch mb-3">     
       <div class="news-item">
-        <div class="row mb-3">
+        <div class="row">
           <div class="col-lg-5">
 	        {SETIMAGE: w=1000&h=800&crop=1}
             <div class="news-image">
