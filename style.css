@@ -1899,6 +1899,21 @@ nav.navbar ul.navbar-nav li.nav-item.dropdown .dropdown-menu li {
   opacity: 1 !important;  
 }
 
+/* CHATBOX */
+.chatbox-bg {
+  margin-bottom: 30px;
+  padding: 30px;
+  -moz-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  background-color: #232930;
+  border: 1px solid #293139;
+}
+#chatbox-input-block { 
+  margin-bottom: 1rem;
+}
+
 
 /* CUSTOM PAGES */
 .default-cpage-content .default-cpage-title {
