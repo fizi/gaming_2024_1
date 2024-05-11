@@ -15,46 +15,48 @@ if ( ! defined('e107_INIT')) {
 
 //---------------------------------MENU-----------------------------------------
 
-$CHATBOX_MENU_TEMPLATE['menu']['start'] =
-	'<ul class="media-list unstyled list-unstyled mt-3">' . PHP_EOL;
+$CHATBOX_MENU_TEMPLATE['menu']['start'] = '
+<div class="chatbox-messages">' . PHP_EOL;
 
 $CHATBOX_MENU_TEMPLATE['menu']['item'] 	= '
-<li class="media d-flex mb-2">
-<div class="media-left me-3">
-	<span class="media-object mr-3">{CB_AVATAR: size=36&shape=circle}</span>
-</div> 
-<div class="media-body">
-	<b>{CB_USERNAME}</b>&nbsp;
-	<small class="muted smalltext">{CB_TIMEDATE}</small><br />
-	<p>{CB_MESSAGE}</p>
-</div>
-</li>' . PHP_EOL;
+  <div class="d-flex">
+    <div class="flex-shrink-0">
+	  {CB_AVATAR: size=36&class=rounded-circle align-self-center}
+    </div> 
+    <div class="flex-grow-1 ms-3">
+      <h6>{CB_USERNAME} <span class="small text-muted fst-italic">{CB_TIMEDATE}</span></h6>
+	  <p class="mb-0">{CB_MESSAGE}</p>
+    </div>
+  </div>
+  <hr />' . PHP_EOL;
 
-$CHATBOX_MENU_TEMPLATE['menu']['end'] 	= '</ul>'. PHP_EOL;
+$CHATBOX_MENU_TEMPLATE['menu']['end'] = '
+</div>'. PHP_EOL;
 
 
 //---------------------------------LIST-----------------------------------------
 
-$CHATBOX_MENU_TEMPLATE['list']['start'] =
-	'<ul class="media-list list-group">' . PHP_EOL;
+$CHATBOX_MENU_TEMPLATE['list']['start'] = '
+<div class="chatbox-bg">' . PHP_EOL;
 
 $CHATBOX_MENU_TEMPLATE['list']['item']  = '
-<li class="media list-group-item" >
-<div class="media-left">
-	<span class="media-object">{CB_AVATAR:size=60}</span>
-</div>
-<div class="media-body">
-	<h4 class="media-heading" style="display: inline !important;">{CB_USERNAME}</h4>
-	<small class="label label-default pull-right float-right">{CB_TIMEDATE}</small><br>
-	<p>{CB_MESSAGE}</p>
-	<div>
-		<div class="pull-left float-left">{CB_BLOCKED}</div>
-		<div class="pull-right float-right">{CB_MOD}</div>
-	</div>
-</div>
-</li>'. PHP_EOL;
+  <div class="d-flex">
+    <div class="flex-shrink-0">
+      {CB_AVATAR:size=60&class=rounded-circle align-self-center}
+    </div>
+    <div class="flex-grow-1 ms-3">
+	  <h5>{CB_USERNAME} <span class="small text-muted fst-italic">{CB_TIMEDATE}</span></h5>	
+	  <p>{CB_MESSAGE}</p>
+	  <div>
+	    <div class="pull-left float-left">{CB_BLOCKED}</div>
+	    <div class="pull-right float-right">{CB_MOD}</div>
+	  </div>
+    </div>
+  </div>
+  <hr />'. PHP_EOL;
 
-$CHATBOX_MENU_TEMPLATE['list']['end']   = '</ul>'. PHP_EOL;
+$CHATBOX_MENU_TEMPLATE['list']['end'] = '
+</div>'. PHP_EOL;
 
 
 
