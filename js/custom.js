@@ -29,7 +29,9 @@ $(function () {
   
   
   // Delete html text from rate shortcode
-  $('.default-news-rate .e-rate.e-rate-news').html('');
+  $('.default-news-rate div.e-rate').filter(function(){
+    return $(this).html($(this).find('img'));
+  });
   
   // Insert html elemens into the html of gallery
   $("<div class='gallery-item-overlay'><span class='eye'></span></div>").insertBefore(".gallery-item-box > a > img");
