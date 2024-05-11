@@ -149,13 +149,13 @@ $NEWS_GRID_TEMPLATE['front-latest-news']['featured'] = '
       {SETIMAGE: w=800&h=600&crop=1}        
       <div class="latest-news-image">
         <a href="{NEWS_URL}">{NEWSIMAGE: item=1&class=rounded-0 img-fluid}</a>
-        <div class="latest-news-category default-news-category news-category-{NEWS_CATEGORY_ID}">{NEWS_CATEGORY_NAME: link=1}</div>
+        <div class="latest-news-category news-category-{NEWS_CATEGORY_ID}">{NEWS_CATEGORY_NAME: link=1}</div>
       </div>
       <div class="latest-news-content">
         <h3 class="latest-news-title">{NEWS_TITLE: link=1}</h3>
         <div class="latest-news-info">
           {GLYPH=fas fa-calendar}&nbsp;{NEWS_DATE=yyyy. M. dd.}&nbsp;&nbsp;&nbsp;&nbsp;{GLYPH=fas fa-comments}&nbsp;{NEWS_COMMENT_COUNT}&nbsp;&nbsp;&nbsp;&nbsp;{GLYPH=fas fa-eye}&nbsp;{HITS_UNIQUE}
-          <span class="latest-news-rate default-news-rate ps-3">{NEWS_RATE: readonly=1&multi=1&uniqueId=default&template= STATUS |RATE}</span>
+          <span class="latest-news-rate ps-3">{NEWS_RATE: readonly=1&multi=1&uniqueId=default&template= STATUS |RATE}</span>
         </div> 
         <div class="latest-news-summary">{NEWS_SUMMARY: limit=200}</div>
       </div>                             
@@ -164,17 +164,23 @@ $NEWS_GRID_TEMPLATE['front-latest-news']['featured'] = '
 ';
 $NEWS_GRID_TEMPLATE['front-latest-news']['item'] = '
       <div class="latest-news-item">
-	    {SETIMAGE: w=1000&h=800&crop=1}
-        <div class="latest-news-image">
-          <a href="{NEWS_URL}">{NEWSIMAGE: item=1&class=rounded-0 img-fluid}</a>
-        </div>
-        <div class="latest-news-content">
-          <h4 class="latest-news-title">{NEWS_TITLE: link=1}</h4>
-          <div class="latest-news-info">
-            {GLYPH=fas fa-calendar}&nbsp;{NEWS_DATE=yyyy. M. dd.}&nbsp;&nbsp;&nbsp;&nbsp;{GLYPH=fas fa-comments}&nbsp;{NEWS_COMMENT_COUNT}&nbsp;&nbsp;&nbsp;&nbsp;{GLYPH=fas fa-eye}&nbsp;{HITS_UNIQUE}
-            <span class="latest-news-category default-news-category ps-3 news-category-{NEWS_CATEGORY_ID}">{NEWSCATEGORY}</span>
-            <span class="latest-news-rate default-news-rate ps-3">{NEWS_RATE: readonly=1&multi=1&uniqueId=default&template= STATUS |RATE}</span>
-          </div>                      
+        <div class="row">
+          <div class="col-lg-3">
+	        {SETIMAGE: w=1000&h=800&crop=1}
+            <div class="latest-news-image">
+              <a href="{NEWS_URL}">{NEWSIMAGE: item=1&class=rounded-0 img-fluid}</a>
+            </div>
+          </div>
+          <div class="col-lg-9">
+            <div class="latest-news-content">
+              <h4 class="latest-news-title">{NEWS_TITLE: link=1}</h4>
+              <div class="latest-news-info">
+                {GLYPH=fas fa-calendar}&nbsp;{NEWS_DATE=yyyy. M. dd.}&nbsp;&nbsp;&nbsp;&nbsp;{GLYPH=fas fa-comments}&nbsp;{NEWS_COMMENT_COUNT}&nbsp;&nbsp;&nbsp;&nbsp;{GLYPH=fas fa-eye}&nbsp;{HITS_UNIQUE}
+                <span class="latest-news-category ps-3 news-category-{NEWS_CATEGORY_ID}">{NEWSCATEGORY}</span>
+                <span class="latest-news-rate ps-3">{NEWS_RATE: readonly=1&multi=1&uniqueId=default&template= STATUS |RATE}</span>
+              </div> 
+            </div>
+          </div>                     
         </div>
       </div>
 ';
@@ -187,8 +193,8 @@ $NEWS_GRID_TEMPLATE['front-latest-news']['end'] = '
 
 //  This News Grid for category 1 - 4 items
 $NEWS_GRID_TEMPLATE['front-category-1']['start'] = '
-<div class="front-category-1-header pt-2 pb-4"><span class="news-category-{NEWS_CATEGORY_ID}">{NEWSCATEGORY}</span></div>
-<div id="front-category-1">
+<div class="front-category-{NEWS_CATEGORY_ID}-header pt-2 pb-4"><span class="news-category-{NEWS_CATEGORY_ID}">{NEWSCATEGORY}</span></div>
+<div id="front-category-{NEWS_CATEGORY_ID}">
   <div class="row">
 ';
 $NEWS_GRID_TEMPLATE['front-category-1']['featured'] = ' ';
@@ -202,7 +208,7 @@ $NEWS_GRID_TEMPLATE['front-category-1']['item'] = '
         <div class="news-content d-flex flex-column">
           <h4 class="news-title">{NEWS_TITLE: link=1}</h4>
           <div class="news-info mt-1 mb-2">
-            <div class="news-rate default-news-rate ps-3">{NEWS_RATE: readonly=1&multi=1&uniqueId=default&template= STATUS |RATE}</div>
+            <div class="default-news-rate mb-2 ps-3">{NEWS_RATE: readonly=1&multi=1&uniqueId=default&template= STATUS |RATE}</div>
             {GLYPH=fas fa-calendar}&nbsp;{NEWS_DATE=yyyy. M. dd.}&nbsp;&nbsp;&nbsp;&nbsp;{GLYPH=fas fa-comments}&nbsp;{NEWS_COMMENT_COUNT}&nbsp;&nbsp;&nbsp;&nbsp;{GLYPH=fas fa-eye}&nbsp;{HITS_UNIQUE}
           </div>                      
         </div>
@@ -217,8 +223,8 @@ $NEWS_GRID_TEMPLATE['front-category-1']['end'] = '
 
 //  This News Grid for category 2 - 5 items
 $NEWS_GRID_TEMPLATE['front-category-2']['start'] = '
-<div class="front-category-2-header pt-2 pb-4"><span class="news-category-{NEWS_CATEGORY_ID}">{NEWSCATEGORY}</span></div>
-<div id="front-category-2">
+<div class="front-category-{NEWS_CATEGORY_ID}-header pt-2 pb-4"><span class="news-category-{NEWS_CATEGORY_ID}">{NEWSCATEGORY}</span></div>
+<div id="front-category-{NEWS_CATEGORY_ID}">
 ';
 $NEWS_GRID_TEMPLATE['front-category-2']['featured'] = '
   <div class="featured-news-item mb-3">
@@ -233,7 +239,7 @@ $NEWS_GRID_TEMPLATE['front-category-2']['featured'] = '
         <div class="news-content">
           <h3 class="news-title">{NEWS_TITLE: link=1}</h3>
           <div class="news-info mt-1 mb-2">
-            <div class="news-rate default-news-rate ps-3">{NEWS_RATE: readonly=1&multi=1&uniqueId=default&template= STATUS |RATE}</div>
+            <div class="default-news-rate mb-2 ps-3">{NEWS_RATE: readonly=1&multi=1&uniqueId=default&template= STATUS |RATE}</div>
             {GLYPH=fas fa-calendar}&nbsp;{NEWS_DATE=yyyy. M. dd.}&nbsp;&nbsp;&nbsp;&nbsp;{GLYPH=fas fa-comments}&nbsp;{NEWS_COMMENT_COUNT}&nbsp;&nbsp;&nbsp;&nbsp;{GLYPH=fas fa-eye}&nbsp;{HITS_UNIQUE}
           </div> 
           <div class="news-summary">{NEWS_SUMMARY: limit=200}</div>
@@ -244,7 +250,7 @@ $NEWS_GRID_TEMPLATE['front-category-2']['featured'] = '
   <div class="row mb-2">     
 ';
 $NEWS_GRID_TEMPLATE['front-category-2']['item'] = '
-    <div class="col-lg-6 items mb-3">
+    <div class="col-lg-6 items d-flex align-items-stretch mb-3">
       <div class="news-item">
         <div class="row">
           <div class="col-lg-4">
@@ -257,8 +263,8 @@ $NEWS_GRID_TEMPLATE['front-category-2']['item'] = '
             <div class="news-content">
               <h4 class="news-title">{NEWS_TITLE: link=1}</h4>
               <div class="news-info mt-1 mb-2">
+                <div class="default-news-rate mb-2 ps-3">{NEWS_RATE: readonly=1&multi=1&uniqueId=default&template= STATUS |RATE}</div>
                 {GLYPH=fas fa-calendar}&nbsp;{NEWS_DATE=yyyy. M. dd.}&nbsp;&nbsp;&nbsp;&nbsp;{GLYPH=fas fa-comments}&nbsp;{NEWS_COMMENT_COUNT}&nbsp;&nbsp;&nbsp;&nbsp;{GLYPH=fas fa-eye}&nbsp;{HITS_UNIQUE}
-                <div class="news-rate default-news-rate ps-3">{NEWS_RATE: readonly=1&multi=1&uniqueId=default&template= STATUS |RATE}</div>
               </div>
               <div class="news-summary">{NEWS_SUMMARY: limit=200}</div>
             </div>
@@ -275,8 +281,8 @@ $NEWS_GRID_TEMPLATE['front-category-2']['end'] = '
 
 //  This News Grid for category 3 - 3 items
 $NEWS_GRID_TEMPLATE['front-category-3']['start'] = '
-<div class="front-category-3-header pt-2 pb-4"><span class="news-category-{NEWS_CATEGORY_ID}">{NEWSCATEGORY}</span></div>
-<div id="front-category-3">
+<div class="front-category-{NEWS_CATEGORY_ID}-header pt-2 pb-4"><span class="news-category-{NEWS_CATEGORY_ID}">{NEWSCATEGORY}</span></div>
+<div id="front-category-{NEWS_CATEGORY_ID}">
 ';
 $NEWS_GRID_TEMPLATE['front-category-3']['featured'] = ' ';
 $NEWS_GRID_TEMPLATE['front-category-3']['item'] = '
@@ -292,7 +298,7 @@ $NEWS_GRID_TEMPLATE['front-category-3']['item'] = '
         <div class="news-content">
           <h4 class="news-title">{NEWS_TITLE: link=1}</h4>
           <div class="news-info mt-1 mb-2">
-            <div class="news-rate default-news-rate ps-3">{NEWS_RATE: readonly=1&multi=1&uniqueId=default&template= STATUS |RATE}</div>
+            <div class="default-news-rate mb-2 ps-3">{NEWS_RATE: readonly=1&multi=1&uniqueId=default&template= STATUS |RATE}</div>
             {GLYPH=fas fa-calendar}&nbsp;{NEWS_DATE=yyyy. M. dd.}&nbsp;&nbsp;&nbsp;&nbsp;{GLYPH=fas fa-comments}&nbsp;{NEWS_COMMENT_COUNT}&nbsp;&nbsp;&nbsp;&nbsp;{GLYPH=fas fa-eye}&nbsp;{HITS_UNIQUE}
           </div>
           <div class="news-summary">{NEWS_SUMMARY: limit=200}</div>                      
@@ -308,8 +314,8 @@ $NEWS_GRID_TEMPLATE['front-category-3']['end'] = '
 
 //  This News Grid for category 4 - 3 items
 $NEWS_GRID_TEMPLATE['front-category-4']['start'] = '
-<div class="front-category-4-header pt-2 pb-4"><span class="news-category-{NEWS_CATEGORY_ID}">{NEWSCATEGORY}</span></div>
-<div id="front-category-4">
+<div class="front-category-{NEWS_CATEGORY_ID}-header pt-2 pb-4"><span class="news-category-{NEWS_CATEGORY_ID}">{NEWSCATEGORY}</span></div>
+<div id="front-category-{NEWS_CATEGORY_ID}">
   <div class="row">
 ';
 $NEWS_GRID_TEMPLATE['front-category-4']['featured'] = '
@@ -322,7 +328,7 @@ $NEWS_GRID_TEMPLATE['front-category-4']['featured'] = '
         <div class="news-content">
           <h3 class="news-title">{NEWS_TITLE: link=1}</h3>
           <div class="news-info">
-            <div class="news-rate default-news-rate ps-3">{NEWS_RATE: readonly=1&multi=1&uniqueId=default&template= STATUS |RATE}</div>
+            <div class="default-news-rate mb-2 ps-3">{NEWS_RATE: readonly=1&multi=1&uniqueId=default&template= STATUS |RATE}</div>
             {GLYPH=fas fa-calendar}&nbsp;{NEWS_DATE=yyyy. M. dd.}&nbsp;&nbsp;&nbsp;&nbsp;{GLYPH=fas fa-comments}&nbsp;{NEWS_COMMENT_COUNT}&nbsp;&nbsp;&nbsp;&nbsp;{GLYPH=fas fa-eye}&nbsp;{HITS_UNIQUE}
           </div> 
           <div class="news-summary">{NEWS_SUMMARY: limit=200}</div>
@@ -340,7 +346,7 @@ $NEWS_GRID_TEMPLATE['front-category-4']['item'] = '
         <div class="news-content">
           <h4 class="news-title">{NEWS_TITLE: link=1}</h4>
           <div class="news-info">
-            <div class="news-rate default-news-rate ps-3">{NEWS_RATE: readonly=1&multi=1&uniqueId=default&template= STATUS |RATE}</div>
+            <div class="default-news-rate mb-2 ps-3">{NEWS_RATE: readonly=1&multi=1&uniqueId=default&template= STATUS |RATE}</div>
             {GLYPH=fas fa-calendar}&nbsp;{NEWS_DATE=yyyy. M. dd.}&nbsp;&nbsp;&nbsp;&nbsp;{GLYPH=fas fa-comments}&nbsp;{NEWS_COMMENT_COUNT}&nbsp;&nbsp;&nbsp;&nbsp;{GLYPH=fas fa-eye}&nbsp;{HITS_UNIQUE}
           </div>                      
         </div>
@@ -355,8 +361,8 @@ $NEWS_GRID_TEMPLATE['front-category-4']['end'] = '
 
 //  This News Grid for category 5 - 4 items
 $NEWS_GRID_TEMPLATE['front-category-5']['start'] = '
-<div class="front-category-5-header pt-2 pb-4"><span class="news-category-{NEWS_CATEGORY_ID}">{NEWSCATEGORY}</span></div>
-<div id="front-category-5">
+<div class="front-category-{NEWS_CATEGORY_ID}-header pt-2 pb-4"><span class="news-category-{NEWS_CATEGORY_ID}">{NEWSCATEGORY}</span></div>
+<div id="front-category-{NEWS_CATEGORY_ID}">
   <div class="row">
 ';
 $NEWS_GRID_TEMPLATE['front-category-5']['featured'] = ' ';
@@ -374,7 +380,7 @@ $NEWS_GRID_TEMPLATE['front-category-5']['item'] = '
             <div class="news-content">
               <h4 class="news-title">{NEWS_TITLE: link=1}</h4>
               <div class="news-info mt-1 mb-2">
-                <div class="news-rate default-news-rate ps-3">{NEWS_RATE: readonly=1&multi=1&uniqueId=default&template= STATUS |RATE}</div>
+                <div class="default-news-rate mb-2 ps-3">{NEWS_RATE: readonly=1&multi=1&uniqueId=default&template= STATUS |RATE}</div>
                 {GLYPH=fas fa-calendar}&nbsp;{NEWS_DATE=yyyy. M. dd.}&nbsp;&nbsp;&nbsp;&nbsp;{GLYPH=fas fa-comments}&nbsp;{NEWS_COMMENT_COUNT}&nbsp;&nbsp;&nbsp;&nbsp;{GLYPH=fas fa-eye}&nbsp;{HITS_UNIQUE}
               </div>
               <div class="news-summary">{NEWS_SUMMARY: limit=80}</div> 
