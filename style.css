@@ -568,10 +568,15 @@ nav.navbar ul.navbar-nav li.nav-item.dropdown .dropdown-menu li {
 
 
 /* NEWS CATEGORIES BACKGROUND */
+.related-news-category.news-category-1,
 .news-category-1 a { background-color: rgba(247, 205, 11, 0.8) !important; }
+.related-news-category.news-category-2,
 .news-category-2 a { background-color: rgba(11, 144, 247, 0.8) !important; }
+.related-news-category.news-category-3,
 .news-category-3 a { background-color: rgba(56, 162, 32, 0.8) !important; }
+.related-news-category.news-category-4,
 .news-category-4 a { background-color: rgba(167, 20, 185, 0.8) !important; }
+.related-news-category.news-category-5,
 .news-category-5 a { background-color: rgba(221, 22, 59, 0.8) !important; }
 
 .news-category-1 a:hover { background-color: rgba(247, 205, 11, 1) !important; }
@@ -872,7 +877,7 @@ nav.navbar ul.navbar-nav li.nav-item.dropdown .dropdown-menu li {
 .related-news-caption h2 > .word1 { color: #dd163b; }
 .related-news-items { }
 .related-item { }
-.related-news-image { 
+.related-item .related-news-image { 
   border-bottom: 3px solid #dd163b;
   position: relative;
   display: block;
@@ -881,7 +886,7 @@ nav.navbar ul.navbar-nav li.nav-item.dropdown .dropdown-menu li {
   -o-transition: opacity .15s ease-in-out;
   transition: opacity .15s ease-in-out;
 }
-.related-news-image img { 
+.related-item .related-news-image img { 
   width: 100%;
   height: auto;
   o-transition: transform 0.6s ease-in-out 0s;
@@ -898,16 +903,34 @@ nav.navbar ul.navbar-nav li.nav-item.dropdown .dropdown-menu li {
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
-.related-news-title { 
+.related-item .related-news-title { 
   margin-bottom: 10px;
 }
-.related-news-title h4 { 
+.related-item .related-news-title h4 { 
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   color: #fff;
   text-transform: uppercase;
   font-size: 1.1rem;
   line-height: 1.2;
+}
+.related-item .related-news-category { 
+  position: absolute;
+  top: 10px;
+  left: 0;
+  padding: 6px 20px;
+  color: #fff;
+  -moz-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: .015em;
 }
 
 
