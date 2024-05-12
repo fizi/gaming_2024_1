@@ -194,19 +194,19 @@ $NEWS_TEMPLATE['related']['end'] = "</ul>";*/
 
 
 $NEWS_TEMPLATE['related']['start'] = '
-{SETIMAGE: w=800&h=600&crop=1}
+{SETIMAGE: w=1000&h=800&crop=1}
 <div class="related-news-caption mb-3 py-3"><h2>{LAN=LAN_RELATED}</h2></div>
 <div class="related-news-items">
   <div class="row">
 ';
 
 $NEWS_TEMPLATE['related']['item'] = '
-    <div class="col-lg-4">
-      <div class="related-item mb-5">
+    <div class="col-lg-4 d-flex align-items-stretch mb-5">
+      <div class="related-item h-100 d-flex flex-column">
         <div class="related-news-image mb-2">
           <a href="{THEME_RELATED_URL}">{THEME_RELATED_IMAGE}</a>
+          <div class="related-news-category news-category-{THEME_RELATED_CATEGORY_ID}">{THEME_RELATED_CATEGORY_NAME}</div> 
         </div>
-        <div class="related-news-category related-news-category-{THEME_RELATED_CATEGORY_ID}">{THEME_RELATED_CATEGORY_NAME}</div> 
         <div class="related-news-title"><h4 class="mb-0"><a href="{THEME_RELATED_URL}">{THEME_RELATED_TITLE}</a></h4></div>
       </div>
     </div>';
