@@ -157,7 +157,7 @@ class theme_shortcodes extends e_shortcode
 
 
 	}
-    /*
+	/*
 	function sc_bootstrap_branding()
 	{
 		$pref = e107::pref('theme', 'branding');
@@ -184,7 +184,7 @@ class theme_shortcodes extends e_shortcode
 		}
 	}
     */
-    /*
+	/*
 	function sc_bootstrap_nav_align()
 	{
 		$pref = e107::pref('theme', 'nav_alignment');
@@ -199,33 +199,62 @@ class theme_shortcodes extends e_shortcode
 		}
 	}
     */
-    
-    /*
+
+	/*
     *
     * @example, {THEME_RELATED_NEWS: type=category-id}
     *
     */
-    
-    function sc_theme_related_news($parm=null)
+
+	function sc_theme_related_news($parm = null)
 	{
-      /** @var news_shortcodes $news */
+
+		/** @var news_shortcodes $news */
 		$sc = e107::getScBatch('news');
 		$news = $sc->getScVar('news_item');
 
-		$ret = '';
-		$type = varset($parm['type']);
-        
-        switch($type)
+		//$obj = e107::getAddon('news', 'e_related'); useless, not enough data */
+		//$tmp = $obj->compile($tags, $parm); marked here just not try it again to find this again
+
+		$tags = $news['news_meta_keywords'];  //category meta keys are available too
+		$parm['current'] = (int) $news['news_id'];
+		$parm['limit'] = varset($parm['limit'], 4);
+
+		$tag_regexp = "'(^|,)(" . str_replace(",", "|", $tags) . ")(,|$)'";
+		$parm['current'] = (int) $news['news_id'];
+
+		$query = "SELECT n.*, nc.category_id, nc.category_name, nc.category_sef 
+		FROM #news AS n
+		LEFT JOIN #news_category AS nc ON n.news_category = nc.category_id
+		WHERE n.news_id != " . $parm['current'] . " AND n.news_class REGEXP '" . e_CLASS_REGEXP . "'  AND n.news_meta_keywords REGEXP " . $tag_regexp . "  ORDER BY n.news_datestamp DESC LIMIT " . $parm['limit'];
+
+
+		$news_related_data = e107::getDb()->retrieve($query, true);
+
+		$TEMPLATE = e107::getTemplate('news', 'news', 'related');
+
+		foreach ($news_related_data as $row)
 		{
-			case "category-id":
-			$ret = $sc->sc_news_category_id();
-			break;
-            
-            case "category-name":
-			$ret = $sc->sc_news_category_name();
-			break;
-        }
-    }
+			$thumbs = !empty($row['news_thumbnail']) ?  explode(",", $row['news_thumbnail']) : array();
+			$image = varset($thumbs[0]);
+			$row = array(
+				'THEME_RELATED_CATEGORY_ID'    => $row['category_id'],
+				'THEME_RELATED_CATEGORY_NAME'  => $row['category_name'],
+				'THEME_RELATED_URL'       => e107::getUrl()->create('news/view/item', $row),
+				'THEME_RELATED_TITLE'     => varset($row['news_title']),
+				'THEME_RELATED_IMAGE'  	  => e107::getParser()->toImage($image),
+				'THEME_RELATED_SUMMARY'   => e107::getParser()->toHTML($row['summary'], true, 'SUMMARY'),
+				'THEME_RELATED_DATE'	  => e107::getParser()->toDate(varset($row['news_datestamp']), 'short'),
+			);
+
+			$list[] = e107::getParser()->simpleParse($TEMPLATE['item'], $row);
+		}
+		$head = e107::getParser()->parseTemplate($TEMPLATE['start']);
+
+		$text = "<div class='e-related clearfix hidden-print'>" . $head . implode("\n", $list) . e107::getParser()->parseTemplate($TEMPLATE['end']) . '</div>';
+		$caption = e107::getParser()->parseTemplate(varset($TEMPLATE['caption']));
+		return e107::getRender()->tablerender($caption, $text, 'related', true);
+	}
     
     
     /* {MEMBERS_LANGUAGE_SWITCHER} */
@@ -385,9 +414,3 @@ class theme_shortcodes extends e_shortcode
 
 
 }
-
-
-
-
-
-

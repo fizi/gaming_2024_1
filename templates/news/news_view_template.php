@@ -85,7 +85,8 @@ $NEWS_VIEW_TEMPLATE['default']['item'] = '
     </ul>
   </div>  
 </div>
-{NEWSRELATED: types=news&limit=3}
+{THEME_RELATED_NEWS: limit=3}
+ 
 
 ';
 
@@ -116,4 +117,4 @@ $NEWS_VIEW_TEMPLATE['nav']['previous'] = '<a rel="prev" href="{NEWS_URL}">{GLYPH
 $NEWS_VIEW_TEMPLATE['nav']['current'] = '<a class="text-center" href="{NEWS_NAV_URL}">{LAN=BACK}</a>';
 $NEWS_VIEW_TEMPLATE['nav']['next'] = '<a rel="next" class="text-right" href="{NEWS_URL}"><span class="mx-1">{NEWS_TITLE}</span>{GLYPH=fa-chevron-right}</a> ';
 
-
+ 

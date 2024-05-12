@@ -204,15 +204,13 @@ $NEWS_TEMPLATE['related']['item'] = '
     <div class="col-lg-4">
       <div class="related-item mb-5">
         <div class="related-news-image mb-2">
-          <a href="{RELATED_URL}">{RELATED_IMAGE}</a>
+          <a href="{THEME_RELATED_URL}">{THEME_RELATED_IMAGE}</a>
         </div>
-        <div class="related-news-category related-news-category-{THEME_RELATED_NEWS: type=category-id}">{THEME_RELATED_NEWS: type=category-name}</div> 
-        <div class="related-news-title"><h4 class="mb-0"><a href="{RELATED_URL}">{RELATED_TITLE}</a></h4></div>
+        <div class="related-news-category related-news-category-{THEME_RELATED_CATEGORY_ID}">{THEME_RELATED_CATEGORY_NAME}</div> 
+        <div class="related-news-title"><h4 class="mb-0"><a href="{THEME_RELATED_URL}">{THEME_RELATED_TITLE}</a></h4></div>
       </div>
     </div>';
 
 $NEWS_TEMPLATE['related']['end'] = '
   </div>
 </div>';
-
-
