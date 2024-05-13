@@ -129,6 +129,16 @@ input.form-check-input {
   line-height: 1.3;
   list-style: none;
 }
+#header-top .header-top-right ul.navbar-nav.navbar-right > li a,
+#header-top .header-top-right ul.navbar-nav.nav-right > li a,
+#header-top .header-top-right ul.multilan > li a {
+  color: #fff;
+}
+#header-top .header-top-right ul.navbar-nav.navbar-right > li a:hover,
+#header-top .header-top-right ul.navbar-nav.nav-right > li a:hover,
+#header-top .header-top-right ul.multilan > li a:hover {
+  color: #dd163b;
+}
 #header-top .header-top-right ul.navbar-nav.navbar-right > li > ul,
 #header-top .header-top-right ul.navbar-nav.nav-right > li > div.dropdown-menu {
   background-color: #232930;
@@ -237,7 +247,7 @@ input.form-check-input {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: .015em;
-  color: #dd163b;
+  color: #fff;
 }
 #header-top .header-top-right ul.navbar-nav.nav-right > li > div.dropdown-menu > form > div > a.btn:hover {
   color: #fff;
