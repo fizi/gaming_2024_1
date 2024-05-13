@@ -27,7 +27,7 @@ $NEWS_VIEW_TEMPLATE['default']['item'] = '
 {SETIMAGE: w=900&h=600}
 <div class="view-item">
   <div class="view-item-image">{NEWS_IMAGE: item=1}</div>
-  <div class="view-item-title">{NEWS_TITLE}</div>
+  <div class="view-item-title">{NEWS_TITLE}{ADMINOPTIONS: class=ps-2}</div>
   <div class="row">
     <div class="col-md-6">
       <div class="view-item-author text-start">
