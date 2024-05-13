@@ -30,9 +30,8 @@ $NEWS_INFO = array(
 // As displayed by news.php?cat.1 OR news.php?all 
 // {NEWSBODY} should not appear in the LISTSTYLE as it is NOT the same as what would appear on news.php (no query) 
 
-// Template/CSS to be reviewed for best bootstrap implementation 
-$NEWS_TEMPLATE['list']['caption'] = '<div class="right-section-title"><h3>{NEWSCATEGORY}</h3></div>';
-$NEWS_TEMPLATE['list']['start']	= $NEWS_TEMPLATE['default']['start'];
+
+
 
 /*
  // (optional)
@@ -57,8 +56,7 @@ $NEWS_TEMPLATE['list']['first'] = '
 ';
 */
 
-$NEWS_TEMPLATE['list']['item'] = $NEWS_TEMPLATE['default']['item'];
-$NEWS_TEMPLATE['list']['end'] = $NEWS_TEMPLATE['default']['end'];
+
 
 
 //$NEWS_MENU_TEMPLATE['list']['separator']   = '<br />';
@@ -132,6 +130,11 @@ $NEWS_TEMPLATE['default']['end'] = '
 </div>
 ';
 
+// Template/CSS to be reviewed for best bootstrap implementation 
+$NEWS_TEMPLATE['list']['caption'] = '<div class="right-section-title"><h3>{NEWSCATEGORY}</h3></div>';
+$NEWS_TEMPLATE['list']['start']	= $NEWS_TEMPLATE['default']['start'];
+$NEWS_TEMPLATE['list']['item'] = $NEWS_TEMPLATE['default']['item'];
+$NEWS_TEMPLATE['list']['end'] = $NEWS_TEMPLATE['default']['end'];
 
 /* FOR NEWS ITEM ON CATEGORY'S PAGE **************************************************************************/
 
