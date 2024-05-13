@@ -160,6 +160,7 @@ $USERSETTINGS_TEMPLATE['extended-field'] = "
 	<label class='col-md-3 control-label'>{FIELDNAME} {REQUIRED}</label>
 	<div class='col-md-9'>{FIELDVAL} {HIDEFIELD}</div>
   </div>
+</div>
 ";
 
 
