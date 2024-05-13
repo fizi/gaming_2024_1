@@ -92,7 +92,7 @@ $NEWS_TEMPLATE['default']['item'] = '
 
 // $NEWS_WRAPPER['default']['item']['NEWSIMAGE: item=1'] = '<span class="news-images-main pull-left float-left col-xs-12 col-sm-6 col-md-6">{---}</span>';
 
-$NEWS_TEMPLATE['default']['caption'] = '<div class="right-section-title"><h3>{LAN=PAGE_NAME}</h3></div>'; // add a value to user tablerender()
+$NEWS_TEMPLATE['default']['caption'] = '<div class="right-section-title"><h3>{NEWSCATEGORY}</h3></div>'; // add a value to user tablerender()
 
 $NEWS_TEMPLATE['default']['start'] = '
 <!-- Default News Template -->
