@@ -15,12 +15,12 @@
 													<div class="col-sm-12">
 													<div class="item col-sm-6" >
 														{SETIMAGE: w=600&h=400&crop=1}
-														{NEWSTHUMBNAIL=placeholder}
+														{NEWS_THUMBNAIL=placeholder}
 													</div>
 													<div class="item col-sm-6">
-		                                                <h3>{NEWSTITLE}</h3>
-		                                                <p>{NEWSMETADIZ: limit=100}</p>
-		                                                <p class="text-right text-end"><a class="btn btn-primary btn-othernews" href="{NEWSURL}">{LAN=READ_MORE}</a></p>
+		                                                <h3>{NEWS_TITLE}</h3>
+		                                                <p>{NEWS_DESCRIPTION: limit=100}</p>
+		                                                <p class="text-right text-end"><a class="btn btn-primary btn-othernews" href="{NEWS_URL}">{LAN=READ_MORE}</a></p>
 	                                                </div>
 	                                               </div>
 	                                               </div>
@@ -28,10 +28,10 @@
 
 	$NEWS_GRID_TEMPLATE['col-md-6']['item'] = '<div class="item col-md-6">
 												{SETIMAGE: w=400&h=400&crop=1}
-												{NEWSTHUMBNAIL=placeholder}
+												{NEWS_THUMBNAIL=placeholder}
               									<h3>{NEWS_TITLE}</h3>
               									<p>{NEWS_SUMMARY}</p>
-              									<p class="text-right text-end"><a class="btn btn-primary btn-othernews" href="{NEWSURL}">{LAN=READ_MORE}</a></p>
+              									<p class="text-right text-end"><a class="btn btn-primary btn-othernews" href="{NEWS_URL}">{LAN=READ_MORE}</a></p>
             							   </div>';
 
 	$NEWS_GRID_TEMPLATE['col-md-6']['end'] = '</div>';
@@ -43,10 +43,10 @@
 	$NEWS_GRID_TEMPLATE['col-md-4']['featured'] = $NEWS_GRID_TEMPLATE['col-md-6']['featured'];
     $NEWS_GRID_TEMPLATE['col-md-4']['item']     = '<div class="item col-md-4">
 													{SETIMAGE: w=400&h=400&crop=1}
-													{NEWSTHUMBNAIL=placeholder}
+													{NEWS_THUMBNAIL=placeholder}
 	                                                <h3>{NEWS_TITLE}</h3>
 	                                                <p>{NEWS_SUMMARY}</p>
-	                                                <p class="text-right text-end"><a class="btn btn-primary btn-othernews" href="{NEWSURL}">{LAN=READ_MORE}</a></p>
+	                                                <p class="text-right text-end"><a class="btn btn-primary btn-othernews" href="{NEWS_URL}">{LAN=READ_MORE}</a></p>
             							        </div>';
 	$NEWS_GRID_TEMPLATE['col-md-4']['end']      = $NEWS_GRID_TEMPLATE['col-md-6']['end'];
 
@@ -59,10 +59,10 @@
 	$NEWS_GRID_TEMPLATE['col-md-3']['featured'] = $NEWS_GRID_TEMPLATE['col-md-6']['featured'];
     $NEWS_GRID_TEMPLATE['col-md-3']['item']     = '<div class="item col-md-3">
 													{SETIMAGE: w=400&h=400&crop=1}
-													{NEWSTHUMBNAIL=placeholder}
+													{NEWS_THUMBNAIL=placeholder}
 	                                                <h3>{NEWS_TITLE}</h3>
 	                                                <p>{NEWS_SUMMARY}</p>
-	                                                <p class="text-right text-end"><a class="btn btn-primary btn-othernews" href="{NEWSURL}">{LAN=READ_MORE}</a></p>
+	                                                <p class="text-right text-end"><a class="btn btn-primary btn-othernews" href="{NEWS_URL}">{LAN=READ_MORE}</a></p>
             							        </div>';
 	$NEWS_GRID_TEMPLATE['col-md-3']['end']      = $NEWS_GRID_TEMPLATE['col-md-6']['end'];
 
@@ -105,7 +105,7 @@
 
 	$NEWS_GRID_TEMPLATE['media-list']['featured'] = '<div class="featured item col-sm-6" >
 														{SETIMAGE: w=600&h=400&crop=1}
-														{NEWSTHUMBNAIL=placeholder}
+														{NEWS_THUMBNAIL=placeholder}
 														 <h3><a href="{NEWS_URL}">{NEWS_TITLE}</a></h3>
 														 <p>{NEWS_SUMMARY: limit=60}</p>
 													</div>
@@ -148,7 +148,7 @@ $NEWS_GRID_TEMPLATE['front-latest-news']['featured'] = '
     <div class="col-lg-6 latest-featured-news-item mb-5">
       {SETIMAGE: w=800&h=600&crop=1}        
       <div class="latest-news-image">
-        <a href="{NEWS_URL}">{NEWSIMAGE: item=1&class=rounded-0 img-fluid}</a>
+        <a href="{NEWS_URL}">{NEWS_IMAGE: item=1&class=rounded-0 img-fluid}</a>
         <div class="latest-news-category news-category-{NEWS_CATEGORY_ID}">{NEWS_CATEGORY_NAME: link=1}</div>
       </div>
       <div class="latest-news-content">
@@ -168,7 +168,7 @@ $NEWS_GRID_TEMPLATE['front-latest-news']['item'] = '
           <div class="col-lg-3">
 	        {SETIMAGE: w=1000&h=800&crop=1}
             <div class="latest-news-image">
-              <a href="{NEWS_URL}">{NEWSIMAGE: item=1&class=rounded-0 img-fluid}</a>
+              <a href="{NEWS_URL}">{NEWS_IMAGE: item=1&class=rounded-0 img-fluid}</a>
             </div>
           </div>
           <div class="col-lg-9">
@@ -203,7 +203,7 @@ $NEWS_GRID_TEMPLATE['front-category-1']['item'] = '
       <div class="news-item">
 	    {SETIMAGE: w=1000&h=800&crop=1}
         <div class="news-image">
-          <a href="{NEWS_URL}">{NEWSIMAGE: item=1&class=rounded-0 img-fluid}</a>
+          <a href="{NEWS_URL}">{NEWS_IMAGE: item=1&class=rounded-0 img-fluid}</a>
         </div>
         <div class="news-content d-flex flex-column">
           <h4 class="news-title">{NEWS_TITLE: link=1}</h4>
@@ -232,7 +232,7 @@ $NEWS_GRID_TEMPLATE['front-category-2']['featured'] = '
       <div class="col-lg-5">
         {SETIMAGE: w=1000&h=800&crop=1}        
         <div class="news-image">
-          <a href="{NEWS_URL}">{NEWSIMAGE: item=1&class=rounded-0 img-fluid}</a>
+          <a href="{NEWS_URL}">{NEWS_IMAGE: item=1&class=rounded-0 img-fluid}</a>
         </div>
       </div>
       <div class="col-lg-7">
@@ -256,7 +256,7 @@ $NEWS_GRID_TEMPLATE['front-category-2']['item'] = '
           <div class="col-lg-4">
 	        {SETIMAGE: w=1000&h=800&crop=1}
             <div class="news-image">
-              <a href="{NEWS_URL}">{NEWSIMAGE: item=1&class=rounded-0 img-fluid}</a>
+              <a href="{NEWS_URL}">{NEWS_IMAGE: item=1&class=rounded-0 img-fluid}</a>
             </div>
           </div>
           <div class="col-lg-8">
@@ -291,7 +291,7 @@ $NEWS_GRID_TEMPLATE['front-category-3']['item'] = '
       <div class="col-lg-3">          
 	    {SETIMAGE: w=1000&h=800&crop=1}
         <div class="news-image">
-          <a href="{NEWS_URL}">{NEWSIMAGE: item=1&class=rounded-0 img-fluid}</a>
+          <a href="{NEWS_URL}">{NEWS_IMAGE: item=1&class=rounded-0 img-fluid}</a>
         </div>
       </div>
       <div class="col-lg-9">     
@@ -323,7 +323,7 @@ $NEWS_GRID_TEMPLATE['front-category-4']['featured'] = '
       <div class="featured-news-item">
         {SETIMAGE: w=1000&h=800&crop=1}        
         <div class="news-image">
-          <a href="{NEWS_URL}">{NEWSIMAGE: item=1&class=rounded-0 img-fluid}</a>
+          <a href="{NEWS_URL}">{NEWS_IMAGE: item=1&class=rounded-0 img-fluid}</a>
         </div>
         <div class="news-content">
           <h3 class="news-title">{NEWS_TITLE: link=1}</h3>
@@ -341,7 +341,7 @@ $NEWS_GRID_TEMPLATE['front-category-4']['item'] = '
       <div class="news-item mb-3">
 	    {SETIMAGE: w=1000&h=800&crop=1}
         <div class="news-image">
-          <a href="{NEWS_URL}">{NEWSIMAGE: item=1&class=rounded-0 img-fluid}</a>
+          <a href="{NEWS_URL}">{NEWS_IMAGE: item=1&class=rounded-0 img-fluid}</a>
         </div>
         <div class="news-content">
           <h4 class="news-title">{NEWS_TITLE: link=1}</h4>
@@ -373,7 +373,7 @@ $NEWS_GRID_TEMPLATE['front-category-5']['item'] = '
           <div class="col-lg-5">
 	        {SETIMAGE: w=1000&h=800&crop=1}
             <div class="news-image">
-              <a href="{NEWS_URL}">{NEWSIMAGE: item=1&class=rounded-0 img-fluid}</a>
+              <a href="{NEWS_URL}">{NEWS_IMAGE: item=1&class=rounded-0 img-fluid}</a>
             </div>
           </div>
           <div class="col-lg-7">

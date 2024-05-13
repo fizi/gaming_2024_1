@@ -28,7 +28,7 @@ $NEWS_INFO = array(
 
 // XXX The ListStyle template offers a listed summary of items with a minimum of 10 items per page. 
 // As displayed by news.php?cat.1 OR news.php?all 
-// {NEWSBODY} should not appear in the LISTSTYLE as it is NOT the same as what would appear on news.php (no query) 
+// {NEWS_BODY} should not appear in the LISTSTYLE as it is NOT the same as what would appear on news.php (no query) 
 
 
 
@@ -39,10 +39,10 @@ $NEWS_TEMPLATE['list']['first'] = '
 		{SETIMAGE: w=800&h=400}
 		<div class="default-item">
 
-          {NEWSIMAGE: item=1}
+          {NEWS_IMAGE: item=1}
 			<h2 class="news-title">{NEWS_TITLE: link=1}</h2>
           <p class="lead">{NEWS_SUMMARY}</p>
-          {NEWSVIDEO: item=1}
+          {NEWS_VIDEO: item=1}
           <div class="text-justify">
        
           </div>
@@ -69,18 +69,18 @@ $NEWS_TEMPLATE['list']['first'] = '
 $NEWS_TEMPLATE['default']['item'] = '
 	{SETIMAGE: w=400}
 	<div class="view-item">
-		<h2>{NEWSTITLE}</h2>
+		<h2>{NEWS_TITLE}</h2>
 		<small class="muted">
-		<span class="date">{NEWSDATE=short} by <span class="author">{NEWSAUTHOR}</span></span>
+		<span class="date">{NEWS_DATE=short} by <span class="author">{NEWS_AUTHOR}</span></span>
 		</small>
 
 		<div class="body">
-			{NEWSIMAGE}
-			{NEWSBODY}
+			{NEWS_IMAGE}
+			{NEWS_BODY}
 			{EXTENDED}
 		</div>
 		<div class="options">
-			<span class="category">{NEWSCATEGORY}</span> {NEWSTAGS} {NEWSCOMMENTS} {EMAILICON} {PRINTICON} {PDFICON} {ADMINOPTIONS}
+			<span class="category">{NEWSCATEGORY}</span> {NEWS_TAGS} {NEWSCOMMENTS} {EMAILICON} {PRINTICON} {PDFICON} {ADMINOPTIONS}
 		</div>
 	</div>
 ';
@@ -90,7 +90,7 @@ $NEWS_TEMPLATE['default']['item'] = '
 
 /* FOR NEWS ITEM ON NEWS.PHP ***********************************************************************/
 
-// $NEWS_WRAPPER['default']['item']['NEWSIMAGE: item=1'] = '<span class="news-images-main pull-left float-left col-xs-12 col-sm-6 col-md-6">{---}</span>';
+// $NEWS_WRAPPER['default']['item']['NEWS_IMAGE: item=1'] = '<span class="news-images-main pull-left float-left col-xs-12 col-sm-6 col-md-6">{---}</span>';
 
 $NEWS_TEMPLATE['default']['caption'] = '<div class="right-section-title"><h3>{NEWSCATEGORY}</h3></div>'; // add a value to user tablerender()
 
@@ -105,7 +105,7 @@ $NEWS_TEMPLATE['default']['item'] = '
       <div class="default-news-item h-100 d-flex flex-column">  
         <div class="default-news-image-main">
           {SETIMAGE: w=800&h=600&crop=1}
-          <a href="{NEWS_URL}">{NEWSIMAGE: item=1&class=rounded-0 img-fluid}</a>
+          <a href="{NEWS_URL}">{NEWS_IMAGE: item=1&class=rounded-0 img-fluid}</a>
           <div class="default-news-category news-category-{NEWS_CATEGORY_ID}">{NEWSCATEGORY}</div>
         </div>
         <div class="default-news-content">
@@ -120,7 +120,7 @@ $NEWS_TEMPLATE['default']['item'] = '
           </div>
           <div class="default-news-summary">{NEWS_SUMMARY: limit=200}</div> 
         </div>
-        <div class="default-item-read-more text-center mt-auto p-3 pb-4"><a class="px-4 py-2" href="{NEWSURL}">{LAN=READ_MORE}</a></div>
+        <div class="default-item-read-more text-center mt-auto p-3 pb-4"><a class="px-4 py-2" href="{NEWS_URL}">{LAN=READ_MORE}</a></div>
       </div>
     </div>
 ';
@@ -152,7 +152,7 @@ $NEWS_TEMPLATE['category']['item'] = '
   <div class="default-news-item mb-4">
     <div class="default-news-image-main p-2">
       {SETIMAGE: w=800&h=600&crop=1}
-      <a href="{NEWS_URL}">{NEWSIMAGE: item=1&class=rounded-0 img-fluid}</a>
+      <a href="{NEWS_URL}">{NEWS_IMAGE: item=1&class=rounded-0 img-fluid}</a>
     </div>
     <div class="default-news-info">
       <div class="default-news-category news-category-{NEWS_CATEGORY_ID}">{NEWS_CATEGORY_NAME: link=1}</div>
@@ -160,7 +160,7 @@ $NEWS_TEMPLATE['category']['item'] = '
         <div class="default-news-title"><h2>{NEWS_TITLE: link=1}</h2></div>
         <div class="default-news-date mb-3">{GLYPH=fas fa-calendar}&nbsp;&nbsp;{NEWS_DATE=yyyy. M. dd.}</div>
         <div class="default-news-summary">{NEWS_SUMMARY: limit=200}</div> 
-        <div class="default-item-read-more"><a class="d-inline-block my-3 px-4 py-2" href="{NEWSURL}">{LAN=READ_MORE}&nbsp;&nbsp;{GLYPH=fas fa-long-arrow-right}</a></div>
+        <div class="default-item-read-more"><a class="d-inline-block my-3 px-4 py-2" href="{NEWS_URL}">{LAN=READ_MORE}&nbsp;&nbsp;{GLYPH=fas fa-long-arrow-right}</a></div>
       </div>
     </div>
   </div>
@@ -179,10 +179,10 @@ $NEWS_TEMPLATE['2-column']['caption']  = '{NEWS_CATEGORY_NAME}';
 $NEWS_TEMPLATE['2-column']['start']    = '<div class="row">';
 $NEWS_TEMPLATE['2-column']['item']     = '<div class="item col-md-6">
 											{SETIMAGE: w=400&h=400&crop=1}
-											{NEWSTHUMBNAIL=placeholder}
+											{NEWS_THUMBNAIL=placeholder}
 	                                            <h3>{NEWS_TITLE}</h3>
 	                                            <p>{NEWS_SUMMARY}</p>
-	                                         	<p class="text-right"><a class="btn btn-primary btn-othernews" href="{NEWSURL}">' . LAN_READ_MORE . '</a></p>
+	                                         	<p class="text-right"><a class="btn btn-primary btn-othernews" href="{NEWS_URL}">' . LAN_READ_MORE . '</a></p>
             							  </div>';
 $NEWS_TEMPLATE['2-column']['end']      = '</div>';
 
