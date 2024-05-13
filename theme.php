@@ -61,28 +61,16 @@ class theme implements e_theme_render {
 	  $style = 'listgroup';
 	  break;
       
-      case 'news_months_menu':
-	  $style = 'listgroup';
-	  break;
-      
       case 'comment':
 	  $style = 'main-menu';
+	  break;
+      
+      case 'login_page':
+	  $style = 'login-page-menu';
 	  break;
 	}
 
 	echo "\n<!-- tablestyle initial:  style=" . $style . "  mode=" . $mode . "  UniqueId=" . varset($options['uniqueId']) . " -->\n\n";
-			
-	if($style === 'listgroup' && empty($options['list'])) {
-	  $style = 'cardmenu';
-	}
-    if($style === 'cardmenu' && !empty($options['list'])) {
-	  $style = 'listgroup';
-	}
-
-	/* Changing card look via prefs */
-	if(!e107::pref('theme', 'cardmenu_look') && $style == 'cardmenu') {
-	  $style = 'menu';
-	}
 
 	// echo "\n<!-- tablestyle:  style=" . $style . "  mode=" . $mode . "  UniqueId=" . varset($options['uniqueId']) . " -->\n\n";
 
@@ -152,12 +140,21 @@ class theme implements e_theme_render {
       echo "<div class='portfolio-box-content'>{$text}</div>";
 	  echo "</div>";
 	  break;
+      
+      case "login-page-menu":
+	  echo "<div class='login-page-box'>";
+	  if(!empty($caption)) {
+	    echo "<h4 class='login-page-box-title'>{$caption}</h4>";
+	  }
+      echo "<div class='login-page-box-content'>{$text}</div>";
+	  echo "</div>";
+	  break;
 
 	  default:
 	  // default style
 	  // only if this always work, play with different styles
 	  if(!empty($caption)) {
-	    echo '<h4>' . $caption . '</h4>';
+	    echo '<h4>'.$caption.'</h4>';
 	  }
 	  echo $text;
 	  return;
