@@ -269,8 +269,10 @@ class theme_shortcodes extends e_shortcode
         if (count($languages) > 1)
         {
 
+			$active_lang = '<img class="flags" src="' . THEME_ABS . 'images/flags/' . e_LANGUAGE . '.png" /> ' . $code . '</a>';
+
 			$text = '<ul class="multilan">
-                   <li class="nav-item dropdown"><a class="nav-link dropdown-toggle text-uppercase" href="javascript:void(0)" id="navbarLangDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">' . $code . '</a>
+                   <li class="nav-item dropdown"><a class="nav-link dropdown-toggle text-uppercase" href="javascript:void(0)" id="navbarLangDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">' . $active_lang . '</a>
                      <ul class="dropdown-menu" aria-labelledby="navbarLangDropdown">';
 			 
             $c = 0;
