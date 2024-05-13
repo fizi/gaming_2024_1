@@ -257,21 +257,22 @@ class theme_shortcodes extends e_shortcode
 	}
     
     
-    /* {MEMBERS_LANGUAGE_SWITCHER} */
-    function sc_members_language_switcher($parm = '')
+    /* {THEME_LANGUAGE_SWITCHER} */
+    function sc_theme_language_switcher($parm = '')
     {
         $slng = e107::getLanguage();
         $code = $slng->convert(e_LANGUAGE);
-        $text = '<ul class="multilan">
-                   <li class="nav-item dropdown"><a class="nav-link dropdown-toggle text-uppercase" href="javascript:void(0)" id="navbarLangDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">'.$code.'</a>
-                     <ul class="dropdown-menu" aria-labelledby="navbarLangDropdown">';
 
-        
         $languages = $slng->installed();
         sort($languages);
  
         if (count($languages) > 1)
         {
+
+			$text = '<ul class="multilan">
+                   <li class="nav-item dropdown"><a class="nav-link dropdown-toggle text-uppercase" href="javascript:void(0)" id="navbarLangDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">' . $code . '</a>
+                     <ul class="dropdown-menu" aria-labelledby="navbarLangDropdown">';
+			 
             $c = 0;
             $checked = "active'";
             foreach ($languages as $lng)
@@ -301,7 +302,7 @@ class theme_shortcodes extends e_shortcode
                 $c++;
             }
  
-        }      
+              
         foreach($tmp AS $option) {
             $value =  $option['code']  ;
             $checked =  $option['checked'];
@@ -315,8 +316,7 @@ class theme_shortcodes extends e_shortcode
         $text .= "</ul>
                   </li>
                   </ul>";
-  
-   
+		}
         return $text; 
     }
     
