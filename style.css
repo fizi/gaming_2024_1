@@ -295,6 +295,7 @@ input.form-check-input {
   background-color: #dd163b;
   color: #fff; 
 }
+#header-top .header-top-right ul.multilan > li.nav-item > a img,
 #header-top .header-top-right ul.multilan > li > ul.dropdown-menu > li a img {
   width: 20px;
   height: auto;
