@@ -3,13 +3,9 @@
 
 $(function () { 
 
-  // SIDEMENU TITLE colored 
-  $(".side-menubox .side-menubox-title h4.title-text").lettering("words");
   // SITENAME colored 
   $(".navbar-brand .site-name").lettering("words");
-  // FOOTER TITLE colored 
-  $(".footer-menubox .footer-menubox-title h4.title-text").lettering("words");
-  // FOOTER TITLE colored 
+  // MAIN MENU TITLE colored 
   $(".main-menubox .main-menubox-title h4.title-text").lettering("words");
   // RELEATED NEWS TITLE colored 
   $(".related-news-caption h2").lettering("words");
