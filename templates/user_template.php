@@ -87,8 +87,8 @@ if (!defined('e107_INIT')) { exit; }
 	// View shortcode wrappers.
 	$USER_WRAPPER['view']['USER_COMMENTPOSTS']      = '<div class="col-xs-12 col-md-4">{LAN=USER_68}</div><div class="col-xs-12 col-md-8">{---}';
 	$USER_WRAPPER['view']['USER_COMMENTPER']        = ' ( {---}% )</div>';
-	$USER_WRAPPER['view']['USER_SIGNATURE']         = '<div>{---}</div>';
-	$USER_WRAPPER['view']['USER_RATING']            = '<div>{---}</div>';
+	$USER_WRAPPER['view']['USER_SIGNATURE']         = '<div class="user-signature">{---}</div>';
+	$USER_WRAPPER['view']['USER_RATING']            = '<div class="user-rate small pt-3">{---}</div>';
 	$USER_WRAPPER['view']['USER_SENDPM']            = '{---}';
 	$USER_WRAPPER['view']['PROFILE_COMMENTS']       = '<div class="clearfix">{---}</div>';
 //	$USER_WRAPPER['view']['PROFILE_COMMENT_FORM']   = '{---} </div>';
