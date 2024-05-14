@@ -2,14 +2,14 @@
 <body id="page-top" class="{LAYOUT_ID}" {BODY_ONLOAD} >
   <div id="header" class="autohide">
     <div id="header-top">
-      <div class="container">
+      <div class="container-fluid px-5">
         <div class="row">
-          <div class="col-md-12 col-lg-6">
+          <div class="col-md-6">
             <div class="header-top-left">
               {XURL_ICONS}
             </div>
           </div>
-          <div class="col-md-12 col-lg-6">       
+          <div class="col-md-6">       
             <div class="header-top-right text-end">
               <span class="header-top-search">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#modal-search">{GLYPH=fas fa-search}</a>
@@ -21,31 +21,25 @@
         </div>    
       </div>
     </div>
-    <div id="header-bottom"> 
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-lg-3">
-            <a class="navbar-brand" href="{SITEURL}">
-              <div class="site-logo float-start">
-                {SETIMAGE: w=800&h=800&crop=1}
-                {LOGO}
-              </div>
-              <div class="site-name d-block">{SITENAME}</div>
-              <div class="site-tag d-block">{SITETAG}</div>
-            </a>
-          </div>
-          <div class="col-md-12 col-lg-9">
-            <nav class="navbar navbar-expand-lg navbar-dark">              
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarResponsive">
-                {NAVIGATION: type=main}     
-              </div>           
-            </nav> 
-          </div>          
-        </div>   
-      </div> 
+    <div id="header-bottom">        
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid px-5">
+          <a class="navbar-brand" href="{SITEURL}">
+            <div class="site-logo float-start">
+              {SETIMAGE: w=800&h=800&crop=1}
+              {LOGO}
+            </div>
+            <div class="site-name d-block">{SITENAME}</div>
+            <div class="site-tag d-block">{SITETAG}</div>
+          </a>              
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            {NAVIGATION: type=main}     
+          </div> 
+        </div>          
+      </nav>             
     </div>
   </div>
 
