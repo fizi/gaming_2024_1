@@ -113,7 +113,7 @@ $NEWS_TEMPLATE['default']['item'] = '
           <div class="default-news-rate">{NEWS_RATE: readonly=1&multi=1&uniqueId=default&template= STATUS |RATE}</div>
           <div class="default-news-author text-start">
             {SETIMAGE: w=25&h=25}
-            {NEWS_AUTHOR_AVATAR: shape=circle} by {NEWS_AUTHOR}&nbsp;&nbsp;-&nbsp;
+            {NEWS_AUTHOR_AVATAR: shape=circle} {NEWS_AUTHOR}&nbsp;&nbsp;-&nbsp;
             <span class="default-news-date">{NEWS_DATE=yyyy. M. dd.}</span>
             <span class="view-item-comments">&nbsp;&nbsp;{GLYPH=fas fa-comments} {NEWS_COMMENT_COUNT}</span>
             <span class="default-news-hits">&nbsp;&nbsp;{GLYPH=fa-line-chart} {HITS_UNIQUE}</span>

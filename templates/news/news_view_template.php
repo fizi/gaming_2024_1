@@ -19,20 +19,20 @@ $NEWS_VIEW_INFO = array(
 
 
 // Default
-// $NEWS_VIEW_WRAPPER['default']['item']['NEWS_IMAGE: item=1'] = '<span class="news-images-main pull-left float-left col-xs-12 col-sm-6 col-md-6">{---}</span>';
-// $NEWS_VIEW_WRAPPER['default']['item']['NEWS_RELATED'] = '<hr />{---}<hr />';
+// $NEWS_VIEW_WRAPPER['default']['item']['NEWSIMAGE: item=1'] = '<span class="news-images-main pull-left float-left col-xs-12 col-sm-6 col-md-6">{---}</span>';
+// $NEWS_VIEW_WRAPPER['default']['item']['NEWSRELATED'] = '<hr />{---}<hr />';
 
 $NEWS_VIEW_TEMPLATE['default']['caption'] = '{NEWS_TITLE}'; // null; // add a value to user tablerender()
 $NEWS_VIEW_TEMPLATE['default']['item'] = '
 {SETIMAGE: w=900&h=600}
 <div class="view-item">
-  <div class="view-item-image">{NEWS_IMAGE: item=1}</div>
+  <div class="view-item-image">{NEWSIMAGE: item=1}</div>
   <div class="view-item-title">{NEWS_TITLE}{ADMINOPTIONS: class=ps-2}</div>
   <div class="row">
     <div class="col-md-6">
       <div class="view-item-author text-start">
         {SETIMAGE: w=25&h=25}
-        {NEWS_AUTHOR_AVATAR: shape=circle} by {NEWS_AUTHOR}&nbsp;&nbsp;-&nbsp;
+        {NEWS_AUTHOR_AVATAR: shape=circle} {NEWS_AUTHOR}&nbsp;&nbsp;-&nbsp;
         <span class="view-item-date">{NEWS_DATE=yyyy. M dd.}</span>
         <span class="view-item-comments">&nbsp;&nbsp;{GLYPH=fas fa-comments} {NEWS_COMMENT_COUNT}</span>
         <span class="view-item-hits">&nbsp;&nbsp;{GLYPH=fas fa-line-chart} {HITS_UNIQUE}</span>
@@ -48,12 +48,12 @@ $NEWS_VIEW_TEMPLATE['default']['item'] = '
   <div class="view-item-images text-center">
     {SETIMAGE: w=800&h=800}		
 	<div class="row mb-4">
-      <div class="col-md-6">{NEWS_IMAGE: item=2}</div>
-      <div class="col-md-6">{NEWS_IMAGE: item=3}</div>
+      <div class="col-md-6">{NEWSIMAGE: item=2}</div>
+      <div class="col-md-6">{NEWSIMAGE: item=3}</div>
     </div>
     <div class="row mb-4">
-      <div class="col-md-6">{NEWS_IMAGE: item=4}</div>
-      <div class="col-md-6">{NEWS_IMAGE: item=5}</div>
+      <div class="col-md-6">{NEWSIMAGE: item=4}</div>
+      <div class="col-md-6">{NEWSIMAGE: item=5}</div>
     </div>
   </div>
   <div class="view-item-extended">
@@ -61,16 +61,16 @@ $NEWS_VIEW_TEMPLATE['default']['item'] = '
   </div>  
   <div class="view-item-videos">
     <div class="row">
-      <div class="col-md-6">{NEWS_VIDEO: item=1}</div>
-      <div class="col-md-6">{NEWS_VIDEO: item=2}</div>
+      <div class="col-md-6">{NEWSVIDEO: item=1}</div>
+      <div class="col-md-6">{NEWSVIDEO: item=2}</div>
     </div>
     <div class="row">
-      <div class="col-md-6">{NEWS_VIDEO: item=3}</div>
-      <div class="col-md-6">{NEWS_VIDEO: item=4}</div>
+      <div class="col-md-6">{NEWSVIDEO: item=3}</div>
+      <div class="col-md-6">{NEWSVIDEO: item=4}</div>
 	</div>	    			
   </div>
   <div class="view-item-rate d-flex justify-content-end">{NEWS_RATE}</div>
-  <div class="view-item-tags">{NEWS_TAGS}</div>	
+  <div class="view-item-tags">{NEWSTAGS}</div>	
   <div class="view-item-options hidden-print my-3">
 	<div class="view-item-share d-flex justify-content-between">
       <div class="social-text">{LAN=LAN_THEME_10}</div>
