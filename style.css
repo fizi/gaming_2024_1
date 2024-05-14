@@ -2654,6 +2654,11 @@ nav.navbar ul.navbar-nav li.nav-item.dropdown .dropdown-menu li {
   line-height: 1.2;
   letter-spacing: .015em;
 }
+#user-profile-view .user-profile-text .user-other-data .user-rate .e-rate.e-rate-user,
+#user-profile-view .user-profile-text .user-other-data .user-rate .e-rate-votes.e-rate-votes-user {
+  display: inline-block;
+  width: 50% !important;
+}
 #user-profile-view .user-profile-nextprev ul.user-view-nextprev { 
   list-style: none;
 }
