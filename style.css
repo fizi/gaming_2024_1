@@ -307,7 +307,6 @@ input.form-check-input {
 
 #header-bottom {
   background-color: rgba(0, 0, 0, 0.9);
-  padding: 16px 0;
 }
 
 
@@ -324,7 +323,7 @@ input.form-check-input {
   font-size: .85rem;
   line-height: 1;
   text-transform: uppercase; 
-  padding: 10px 10px 3px 10px; 
+  padding: 10px 10px 4px 50px; 
 }
 .navbar-brand .site-name .word2 {
   color: #dd163b;
@@ -336,7 +335,7 @@ input.form-check-input {
   font-size: .65rem;
   line-height: 1;
   text-transform: uppercase; 
-  padding: 0 10px 0;   
+  padding: 0 10px 0 50px;   
 }
 
 
@@ -354,11 +353,12 @@ nav.navbar ul.navbar-nav li.nav-item.dropdown a.dropdown-toggle {
   line-height: 1.5;
   letter-spacing: .015em;
   text-transform: uppercase;
-  padding: 5px 15px;
+  padding: 10px 15px;
 }
 nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover,
 nav.navbar ul.navbar-nav li.nav-item.dropdown a.dropdown-toggle:hover { 
   color: #dd163b;
+  background-color: #000;
 }
 /* Dropdown */
 nav.navbar ul.navbar-nav li.nav-item.dropdown:hover .dropdown-menu {
