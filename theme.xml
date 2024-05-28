@@ -38,5 +38,6 @@
 			<custompages>:forum/ :download/</custompages>
 		</layout>
 		<layout name='sidebar_right' title='Sidebar (right)' default='true' />
+		<layout name='bare' title='Bare'/>
 	</layouts>
 </e107Theme>

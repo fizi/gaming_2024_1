@@ -159,6 +159,7 @@ $USER_TEMPLATE['view'] = '
 	  </ul>
 	</div>
     <!-- Start Comments -->
+	{SETSTYLE=bare}
 	{PROFILE_COMMENTS}
 	<!-- End Comments -->
   </div>
